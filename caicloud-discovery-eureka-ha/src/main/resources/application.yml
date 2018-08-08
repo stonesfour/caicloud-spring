@@ -1,6 +1,9 @@
+ spring: 
+  application: 
+    name: EUREKA-HA
 server:
   port: 8761
-
+ 
 # eureka:
 #   instance:
 #     hostname: ${EUREKA-SERVICE-NAME}
