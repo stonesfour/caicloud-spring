@@ -1,5 +1,5 @@
 # 版本信息
-FROM jdk:10
+FROM primetoninc/jdk:1.8
 MAINTAINER stonesfour "sunshilei@caicloud.io"
 
 # change path to your repo dir
