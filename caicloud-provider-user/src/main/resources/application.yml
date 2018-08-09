@@ -13,7 +13,7 @@ spring:
     generate-ddl: false
     show-sql: true
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
     database: h2
   h2:
     console:
@@ -33,7 +33,7 @@ spring:
   application:
     name: caicloud-provider-user
   zipkin:
-    base-url: http://caicloud-server-sleuth:9411
+    base-url: http://zipkin:9411
   sleuth:
     sampler:
       percentage: 1.0
