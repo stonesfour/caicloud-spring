@@ -5,6 +5,6 @@ MAINTAINER stonesfour "sunshilei@caicloud.io"
 # change path to your repo dir
 COPY ./caicloud-zuul-gateway/target/caicloud-zuul-gateway-0.0.1-SNAPSHOT.jar  /caicloud-zuul-gateway.jar
 
-EXPOSE 8010
+EXPOSE 8083
 
 CMD ["java", "-jar", "/caicloud-zuul-gateway.jar"]
