@@ -6,11 +6,11 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://caicloud-discovery-eureka:8761/eureka/
+      defaultZone: http://peer1:8761/eureka/
   instance:
     prefer-ip-address: true
 turbine:
   aggregator:
     clusterConfig: default
-  appConfig: caicloud-consumer-movie
+  appConfig: caicloud-consumer-movie, caicloud-provider-user
   clusterNameExpression: "'default'"
