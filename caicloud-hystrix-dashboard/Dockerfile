@@ -5,6 +5,6 @@ MAINTAINER stonesfour "sunshilei@caicloud.io"
 # change path to your repo dir
 COPY ./caicloud-hystrix-dashboard/target/caicloud-hystrix-dashboard-0.0.1-SNAPSHOT.jar  /caicloud-hystrix-dashboard.jar
 
-EXPOSE 8010
+EXPOSE 8030
 
 CMD ["java", "-jar", "/caicloud-hystrix-dashboard.jar"]
