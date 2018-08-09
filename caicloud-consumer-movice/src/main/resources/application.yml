@@ -4,7 +4,7 @@ spring:
   application:
     name: caicloud-consumer-movie
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://zikpin:9411
   sleuth:
     sampler:
       percentage: 1.0
@@ -13,7 +13,7 @@ eureka:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: http://caicloud-discovery-eureka:8761/eureka/
+      defaultZone: http://peer1:8761/eureka/
   instance:
     prefer-ip-address: true
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000

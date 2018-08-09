@@ -30,11 +30,11 @@ spring:
     suffix: .ftl
   application:
     name: caicloud-provider-user
-#  zipkin:
-#    base-url: http://caicloud-server-sleuth:9411
-#  sleuth:
-#    sampler:
-#      percentage: 1.0
+  zipkin:
+    base-url: http://caicloud-server-sleuth:9411
+  sleuth:
+    sampler:
+      percentage: 1.0
 logging:
   level:
     root: INFO
@@ -47,7 +47,7 @@ eureka:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: http://caicloud-discovery-eureka:8761/eureka/
+      defaultZone: http://peer1:8761/eureka/
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
