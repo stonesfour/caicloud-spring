@@ -18,6 +18,8 @@ spring:
   h2:
     console:
       path: /h2-console
+      settings:
+        web-allow-others: true
       enabled: true
   freemarker:
     template-loader-path: classpath:/templates
