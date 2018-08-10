@@ -29,7 +29,7 @@ public class HelloHealth {
         return this.restTemplate.getForObject("http://demo-provider:8088/health/调用demo-hello，本地传递参数：+" + name, String.class);
     }
 
-    @GetMapping("/demo-hello/{num}}")
+    @GetMapping("/demo-hello/{num}/{desc}")
     public String findById(@PathVariable Integer num, @PathVariable String desc) {
 
         return desc + this.restTemplate.getForObject("http://demo-provider:8088/random/" + num, String.class);
