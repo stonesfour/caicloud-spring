@@ -33,7 +33,7 @@ spring:
   application:
     name: caicloud-provider-user
   zipkin:
-    base-url: http://caicloud-zipkin:9411
+    base-url: http://zipkin.spring-cloud-server:9411
   sleuth:
     sampler:
       percentage: 1.0
@@ -49,7 +49,7 @@ eureka:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: http://caicloud-discovery-eureka:8761/eureka/
+      defaultZone: http://peer1.spring-cloud-server:8761/eureka/
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
