@@ -1,2 +1,2 @@
 server:
-  port: 8030
+  port: ${HYSTRIX_DASHBOARD_PORT}

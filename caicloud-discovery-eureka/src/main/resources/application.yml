@@ -1,9 +1,9 @@
 server:
-  port: ${eurekaPort}
+  port: ${EUREKA_PORT}
 
 eureka:
   instance:
-    hostname: ${eurekaHostName}
+    hostname: ${EUREKA_HOST_NAME}
   client:
     register-with-eureka: false
     fetch-registry: false
