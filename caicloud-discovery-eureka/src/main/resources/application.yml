@@ -1,9 +1,9 @@
 server:
-  port: 8761
+  port: ${eurekaPort}
 
 eureka:
   instance:
-    hostname: caicloud-discovery-eureka
+    hostname: ${eurekaHostName}
   client:
     register-with-eureka: false
     fetch-registry: false
