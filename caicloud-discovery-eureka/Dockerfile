@@ -7,6 +7,7 @@ ENV EUREKA_PORT=8761
 ENV EUREKA_HOST_NAME=localhost
 
 # change path to your repo dir
-COPY ./caicloud-discovery-eureka/target/caicloud-discovery-eureka-0.0.1-SNAPSHOT.jar  /caicloud-discovery-eureka.jar
+COPY ./caicloud-discovery-eureka/target/caicloud-discovery-eureka-0.0.1-SNAPSHOT.jar  /app.jar
 
-CMD ["java", "-jar", "/caicloud-discovery-eureka.jar"]
+# CMD ["java", "-jar", "/caicloud-discovery-eureka.jar"]
+ENTRYPOINT [ "sh","-c","java -jar $PARAM /app.jar"]
