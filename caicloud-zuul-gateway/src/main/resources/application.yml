@@ -1,18 +1,15 @@
 spring:
   application:
-    name: caicloud-zuul-gateway
+    name: ${ZUUL_NAME}
 server:
-  port: 8083
+  port: ${ZUUL_PORT}
 eureka:
   client:
     service-url:
-      defaultZone: http://caicloud-discovery-eureka:8761/eureka/
+      defaultZone: ${EUREKA_URL}
   instance:
     prefer-ip-address: true
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
-zuul:
-  routes:
-    caicloud-provider-user: /user.zuul/**
