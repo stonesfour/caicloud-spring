@@ -2,7 +2,7 @@
 FROM primetoninc/jdk:1.8
 MAINTAINER stonesfour "sunshilei@caicloud.io"
 
-ENV EUREKA_PORT=8671
+ENV EUREKA_PORT=8761
 
 ENV EUREKA_HOST_NAME=localhost
 

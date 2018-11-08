@@ -2,7 +2,7 @@
 FROM primetoninc/jdk:1.8
 MAINTAINER stonesfour "sunshilei@caicloud.io"
 
-ENV HYSTRIX_DASHBOARD_PORT=8030
+ENV HYSTRIX_DASHBOARD_PORT=30008
 
 # change path to your repo dir
 COPY ./caicloud-hystrix-dashboard/target/caicloud-hystrix-dashboard-0.0.1-SNAPSHOT.jar  /caicloud-hystrix-dashboard.jar
