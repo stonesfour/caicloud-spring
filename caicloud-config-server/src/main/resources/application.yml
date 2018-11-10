@@ -1,0 +1,20 @@
+server:
+  port: ${CONFIG_SERVER_PORT}
+    
+eureka:
+  client:
+    enabled: ${ENABLE_EUREKA}
+    service-url:
+      defaultZone: ${EUREKA_URL}
+
+spring:
+  application:
+    name: ${CONFIG_SERVER_NAME}
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${GIT_URL}
+          search-paths: ${SEARCH_PATH}
+          username: ${USERNAME}
+          password: ${PASSWORD}
