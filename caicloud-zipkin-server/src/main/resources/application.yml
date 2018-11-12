@@ -1,0 +1,15 @@
+spring:
+    application:
+        name: ${ZIPKIN_NAME}
+server:
+    port: ${ZIPKIN_PORT}
+eureka:
+    client:
+        enabled: ${ENABLE_EUREKA}
+        service-url:
+            defaultZone: ${EUREKA_URL}
+management:
+    metrics:
+        web:
+            server:
+                auto-time-requests: false

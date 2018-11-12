@@ -1,0 +1,15 @@
+server:
+  port: ${TURBINE_PORT}
+spring:
+  application:
+    name: ${TURBINE_NAME}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL}
+turbine:
+  aggregator: 
+    clusterConfig: ${CLUSTER_CONFIG} #指定聚合哪些集群
+  app-config: ${APP_CONFIG} #指定了被收集的app名称
+  combine-host-port: true #同一主机多个服务使用hostname+port进行区分
+  cluster-name-expression: ${CLUSTER_NAME} #指定集群名称
