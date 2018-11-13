@@ -4,7 +4,7 @@ MAINTAINER stonesfour "sunshilei@caicloud.io"
 
 ENV HYSTRIX_DASHBOARD_PORT=30008
 
-RUN wget -q https://github.com/moshuipan/caicloud-spring/raw/master/caicloud-hystrix-dashboard/caicloud-hystrix-dashboard-0.0.1-SNAPSHOT.jar \
+RUN wget -q https://github.com/stonesfour/caicloud-spring/raw/master/caicloud-hystrix-dashboard/caicloud-hystrix-dashboard-0.0.1-SNAPSHOT.jar \
     -O app.jar
 
 # change path to your repo dir
