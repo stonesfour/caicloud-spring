@@ -1,7 +1,7 @@
 package com.caicloud.controller;
 
 import com.caicloud.entity.User;
-import com.caicloud.repository.UserRepository;
+// import com.caicloud.repository.UserRepository;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,18 +10,22 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class UserController {
 
-  @Autowired
-  private UserRepository userRepository;
+  // @Autowired
+  // private UserRepository userRepository;
 
   @Qualifier("eurekaClient")
   @Autowired
   private EurekaClient eurekaClient;
 
+
+  @GetMapping("/hello")
+  public String hello() {
+    return "hello";
+  }
 
   /**
    * 查询用户信息
@@ -30,12 +34,13 @@ public class UserController {
    */
   @GetMapping("/getUser/{id}")
   public User findById(@PathVariable Long id) {
-    Optional<User> userCategory = userRepository.findById(id);
-    if(userCategory.isPresent()){
-      return userCategory.get();
-    }else {
-      return new User(999L, "不存在");
-    }
+    // Optional<User> userCategory = userRepository.findById(id);
+    // if(userCategory.isPresent()){
+    //   return userCategory.get();
+    // }else {
+    //   return new User(999L, "不存在");
+    // }
+    return new User(id, id.toString());
   }
 
   /**
@@ -45,8 +50,8 @@ public class UserController {
    */
   @PostMapping("/user")
   public User postUser(@RequestBody User user) {
-    return userRepository.save(user);
-
+    // return userRepository.save(user);
+    return user;
   }
 
   /**
@@ -57,7 +62,8 @@ public class UserController {
    */
   @RequestMapping(value = "/user.from")
   public User fromUser(@ModelAttribute("form") User user) {
-    return userRepository.save(user);
+    // return userRepository.save(user);
+    return user;
   }
 
   /**
@@ -68,13 +74,21 @@ public class UserController {
    */
   @RequestMapping(value = "/delete/{id}")
   public String deleteUser(@PathVariable Long id) {
-    userRepository.deleteById(id);
+    // userRepository.deleteById(id);
     return "sucess";
   }
 
   @GetMapping("get-all")
   public List<User> usersAll() {
-    return userRepository.findAll();
+    // return userRepository.findAll();
+    ArrayList<User> list = new ArrayList();
+    User user = new User(1L, "zhangsan");
+    User user2 = new User(2L, "zhangsan");
+    User user3 = new User(3L, "zhangsan");
+    list.add(user);
+    list.add(user2);
+    list.add(user3);
+    return list;
   }
 
   @GetMapping("/eureka-instance")

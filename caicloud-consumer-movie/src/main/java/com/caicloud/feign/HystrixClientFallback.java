@@ -1,6 +1,6 @@
 package com.caicloud.feign;
 
-import com.itmuch.cloud.entity.User;
+import com.caicloud.entity.User;
 import org.springframework.stereotype.Component;
 
 @Component

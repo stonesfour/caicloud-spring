@@ -1,6 +1,6 @@
 package com.caicloud.feign;
 
-import com.itmuch.cloud.entity.User;
+import com.caicloud.entity.User;
 import feign.hystrix.FallbackFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

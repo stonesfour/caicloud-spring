@@ -1,10 +1,10 @@
-package com.caicloud.repository;
+// package com.caicloud.repository;
 
-import com.caicloud.entity.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+// import com.caicloud.entity.User;
+// import org.springframework.data.jpa.repository.JpaRepository;
+// import org.springframework.stereotype.Repository;
 
-@Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+// @Repository
+// public interface UserRepository extends JpaRepository<User, Long> {
 
-}
+// }
