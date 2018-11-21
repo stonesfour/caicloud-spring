@@ -11,10 +11,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableEurekaClient
+@EnableEurekaClient  //eureka
 @EnableFeignClients
-@EnableCircuitBreaker
-@EnableHystrix
+@EnableCircuitBreaker // hystrix
+@EnableHystrix        //  hystrix
 public class ConsumerMovieRibbonApplication {
 
   @Bean
