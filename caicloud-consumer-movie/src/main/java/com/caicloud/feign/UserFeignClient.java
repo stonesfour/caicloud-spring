@@ -1,5 +1,5 @@
 package com.caicloud.feign;
-import com.itmuch.cloud.entity.User;
+import com.caicloud.entity.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

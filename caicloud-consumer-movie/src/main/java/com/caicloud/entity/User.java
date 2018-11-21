@@ -1,4 +1,4 @@
-package com.itmuch.cloud.entity;
+package com.caicloud.entity;
 
 import java.math.BigDecimal;
 

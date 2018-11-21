@@ -4,16 +4,19 @@ spring:
   application:
     name: caicloud-consumer-movie
   zipkin:
-    base-url: http://zikpin.spring-cloud-server:9411
+    base-url: http://testzipkin-server:9411
   sleuth:
     sampler:
-      percentage: 1.0
+      percentage: 1
+  cloud:
+    config:
+      label: master
+      uri: http://testconfig-server:8888
 eureka:
   client:
-    healthcheck:
-      enabled: true
     serviceUrl:
-      defaultZone: http://peer1.spring-cloud-server:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka/
   instance:
     prefer-ip-address: true
+management.endpoints.web.exposure.include: "*"
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000

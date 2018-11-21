@@ -4,6 +4,8 @@ spring:
 server:
     port: ${ZIPKIN_PORT}
 eureka:
+    instance:
+        prefer-ip-address: true
     client:
         enabled: ${ENABLE_EUREKA}
         service-url:

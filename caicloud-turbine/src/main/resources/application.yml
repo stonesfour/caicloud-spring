@@ -4,6 +4,8 @@ spring:
   application:
     name: ${TURBINE_NAME}
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URL}
